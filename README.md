@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Retail Intelligence Platform
 
 A modern retail analytics platform that transforms operational data into trusted business insights using Apache Airflow, Databricks, dbt, Python, SQL, and Streamlit.
@@ -48,9 +47,8 @@ dbt manages transformation logic, testing, incremental processing, and snapshots
 Streamlit presents the final analytical outputs to the user.
 
 ## Architecture Diagram
-
 <p align="center">
-  <img width="630" height="701" alt="Retail Intelligence Platform Architecture" src="https://github.com/user-attachments/assets/e58b513e-4e91-4eaa-8b4b-125c80f1c586" />
+<img width="2073" height="2319" alt="image" src="https://github.com/user-attachments/assets/065a722e-a30f-468e-83c8-8a21317a0d59" />
 </p>
 
 <p align="center">
@@ -180,7 +178,7 @@ The analytical layer is designed to support practical retail questions.
 | File ingestion              | AWS S3         |
 | Containerization            | Docker         |
 | Local orchestration runtime | Docker Compose |
-=======
+
 # Walmart Retail Data Engineering Project
 
 A full-stack retail analytics project built around a Walmart-style sales dataset, using Python, Airflow, Databricks, and dbt to orchestrate and transform data into business-ready analytics tables.
@@ -231,7 +229,6 @@ The system follows a layered warehouse approach:
 3. Databricks job ingestion is triggered through the Databricks SDK.
 4. dbt runs source freshness, silver transformations, tests, and gold models.
 5. Analytics-ready tables are produced for downstream reporting and dashboarding.
->>>>>>> 3bd1704 (uploading all project files)
 
 ## Repository Structure
 
@@ -568,8 +565,7 @@ Not just data that moves.
 
 Data that becomes useful.
 
-=======
-.
+```
 ├── airflow/
 │   ├── dags/
 │   │   └── orchestrate.py
@@ -586,7 +582,6 @@ Data that becomes useful.
 │   └── load_data.py
 ├── walmart_project/
 │   ├── dbt_project.yml
-│   ├── profiles.yml
 │   ├── macros/
 │   ├── models/
 │   ├── snapshots/
@@ -594,9 +589,6 @@ Data that becomes useful.
 │   └── target/
 ├── main.py
 ├── pyproject.toml
-├── AI_PROJECT_CONTEXT.md
-├── AI_PROJECT_HANDOFF_PROMPT.md
-├── generate_ai_project_brief.py
 └── README.md
 ```
 
@@ -716,4 +708,3 @@ Potential improvements for the next iteration include:
 ## Portfolio Value
 
 This project is strong because it combines a real retailer domain, pipeline orchestration, transformation logic, and a simple business-facing analytics experience. It shows an understanding of both engineering and data product thinking.
->>>>>>> 3bd1704 (uploading all project files)
