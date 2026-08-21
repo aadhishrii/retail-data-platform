@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Retail Intelligence Platform
 
 A modern retail analytics platform that transforms operational data into trusted business insights using Apache Airflow, Databricks, dbt, Python, SQL, and Streamlit.
@@ -179,10 +180,63 @@ The analytical layer is designed to support practical retail questions.
 | File ingestion              | AWS S3         |
 | Containerization            | Docker         |
 | Local orchestration runtime | Docker Compose |
+=======
+# Walmart Retail Data Engineering Project
+
+A full-stack retail analytics project built around a Walmart-style sales dataset, using Python, Airflow, Databricks, and dbt to orchestrate and transform data into business-ready analytics tables.
+
+## Overview
+
+This project demonstrates an end-to-end data engineering workflow for retail operations and sales analytics. It starts with raw transaction and customer data, orchestrates ingestion through Airflow, and transforms the data in layered dbt models to create clean, analyst-friendly outputs.
+
+The project is designed to show a realistic modern data stack that handles:
+
+- data ingestion
+- orchestration
+- transformation and testing
+- business-layer modeling
+- analytics readiness
+- operational automation
+
+## Business Use Case
+
+The project models a retail business scenario involving:
+
+- customers
+- stores
+- products
+- employees
+- orders
+- order items
+
+The final output is a set of curated tables and metrics that can support dashboards, sales analysis, operational reporting, and future demand or revenue analysis.
+
+## Tech Stack
+
+- Python
+- Apache Airflow
+- Databricks
+- dbt
+- SQL
+- Pandas
+- Streamlit
+- Plotly
+
+## Architecture
+
+The system follows a layered warehouse approach:
+
+1. Raw source data is loaded into dataset files and schema definitions.
+2. Airflow orchestrates the workflow.
+3. Databricks job ingestion is triggered through the Databricks SDK.
+4. dbt runs source freshness, silver transformations, tests, and gold models.
+5. Analytics-ready tables are produced for downstream reporting and dashboarding.
+>>>>>>> 3bd1704 (uploading all project files)
 
 ## Repository Structure
 
 ```text
+<<<<<<< HEAD
 airflow/
     dags/
         orchestrate.py
@@ -514,3 +568,152 @@ Not just data that moves.
 
 Data that becomes useful.
 
+=======
+.
+├── airflow/
+│   ├── dags/
+│   │   └── orchestrate.py
+│   ├── Dockerfile
+│   ├── docker-compose.yaml
+│   ├── requirements.txt
+│   └── walmart_project/
+├── dashboard/
+│   ├── app.py
+│   └── requirements.txt
+├── walmart_dataset/
+│   ├── data/
+│   ├── ddl/
+│   └── load_data.py
+├── walmart_project/
+│   ├── dbt_project.yml
+│   ├── profiles.yml
+│   ├── macros/
+│   ├── models/
+│   ├── snapshots/
+│   ├── tests/
+│   └── target/
+├── main.py
+├── pyproject.toml
+├── AI_PROJECT_CONTEXT.md
+├── AI_PROJECT_HANDOFF_PROMPT.md
+├── generate_ai_project_brief.py
+└── README.md
+```
+
+## Pipeline Flow
+
+The orchestration sequence in Airflow is:
+
+- trigger CDC ingestion job
+- clean target folder
+- run source freshness checks
+- run silver technical transformations
+- run silver technical tests
+- run silver business transformations
+- run silver business tests
+- run gold ephemeral models
+- run snapshot models
+- run gold fact models
+
+This creates an organized ELT pipeline from raw source to curated business data.
+
+## Data Model
+
+Core entity tables include:
+
+- customers
+- employees
+- stores
+- products
+- orders
+- order_items
+
+The dbt layer creates:
+
+- source layer definitions
+- silver technical staging models
+- silver business layer joined data
+- gold fact and ephemeral output models
+
+## Dashboard Feature
+
+A Streamlit dashboard has been added under the `dashboard/` folder to provide a simple analytics interface.
+
+It includes:
+
+- revenue overview
+- orders by status
+- sales by store
+- sales by category
+- monthly revenue trend
+- top-performing products
+- basic data quality snapshot
+
+## How to Run
+
+### 1. Install dependencies
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r dashboard/requirements.txt
+```
+
+### 2. Run the dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+### 3. Airflow project
+
+From the `airflow/` directory:
+
+```bash
+docker compose up --build
+```
+
+### 4. dbt project
+
+From the `walmart_project/` directory:
+
+```bash
+dbt debug
+dbt run
+dbt test
+```
+
+## Key Files
+
+- `airflow/dags/orchestrate.py` — orchestrates the full pipeline
+- `walmart_project/models/silver_b/obt_b.sql` — joined business-layer model
+- `walmart_project/models/gold/fact/fact_orders.sql` — fact table output
+- `walmart_dataset/ddl/walmart_schema.sql` — schema definition for the raw retail entities
+- `dashboard/app.py` — analytics dashboard app
+
+## What I Learned
+
+This project demonstrates:
+
+- warehouse-style ELT architecture
+- orchestrated transformation workflows
+- layered business modeling with dbt
+- operational automation patterns
+- how to package a data engineering project for a portfolio
+
+## Future Enhancements
+
+Potential improvements for the next iteration include:
+
+- customer segmentation analysis
+- demand forecasting
+- inventory risk monitoring
+- store performance scorecards
+- alerts and SLA monitoring in Airflow
+- CI/CD for dbt and deployment checks
+- cloud deployment and secrets management
+
+## Portfolio Value
+
+This project is strong because it combines a real retailer domain, pipeline orchestration, transformation logic, and a simple business-facing analytics experience. It shows an understanding of both engineering and data product thinking.
+>>>>>>> 3bd1704 (uploading all project files)

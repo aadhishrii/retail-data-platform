@@ -1,0 +1,13 @@
+[project]
+name = "walmart-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apache-airflow>=3.3.1",
+    "apache-airflow-providers-celery>=3.22.0",
+    "databricks-sdk>=0.47.0",
+    "dbt-core>=1.12.2",
+    "dbt-databricks>=1.10.9",
+]
